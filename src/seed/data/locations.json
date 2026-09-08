@@ -1,0 +1,8 @@
+[
+  { "id": 1, "city": "Cape Town", "name": "V&A Waterfront", "address": "Shop 14, Victoria Wharf, V&A Waterfront, Cape Town, 8001", "hours": "Mon–Sun: 10:00 – 22:00", "phone": "021 555 0142", "distance": "Open Now", "statusColor": "text-green-400" },
+  { "id": 2, "city": "Cape Town", "name": "Claremont", "address": "45 Main Road, Claremont, Cape Town, 7708", "hours": "Mon–Sun: 10:00 – 21:30", "phone": "021 555 0289", "distance": "Open Now", "statusColor": "text-green-400" },
+  { "id": 3, "city": "Johannesburg", "name": "Sandton City", "address": "Level 2, Sandton City Mall, Sandton, Johannesburg, 2196", "hours": "Mon–Sun: 09:00 – 22:00", "phone": "011 555 0374", "distance": "Open Now", "statusColor": "text-green-400" },
+  { "id": 4, "city": "Johannesburg", "name": "Rosebank", "address": "The Zone @ Rosebank, 177 Oxford Road, Rosebank, 2196", "hours": "Mon–Sat: 10:00 – 21:00 · Sun: 10:00 – 20:00", "phone": "011 555 0491", "distance": "Open Now", "statusColor": "text-green-400" },
+  { "id": 5, "city": "Durban", "name": "Gateway Theatre", "address": "Shop 62, Gateway Theatre of Shopping, Umhlanga, 4319", "hours": "Mon–Sun: 09:00 – 21:00", "phone": "031 555 0536", "distance": "Closes 21:00", "statusColor": "text-yellow-400" },
+  { "id": 6, "city": "Pretoria", "name": "Brooklyn Mall", "address": "Shop 8, Brooklyn Mall, Fehrsen St, Brooklyn, Pretoria, 0181", "hours": "Mon–Sat: 09:00 – 20:00 · Sun: 10:00 – 17:00", "phone": "012 555 0617", "distance": "Open Now", "statusColor": "text-green-400" }
+]
