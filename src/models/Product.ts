@@ -17,6 +17,10 @@ const ProductSchema: Schema = new Schema(
     price: { type: Number, required: true },
     image: { type: String },
     tag: { type: String, default: null }
+      ,
+      category: { type: String, default: null },
+      available: { type: Boolean, default: true },
+      stock: { type: Number, default: null }
   },
   { timestamps: true }
 );
