@@ -61,7 +61,16 @@ const OrderSchema: Schema = new Schema(
     },
     status: { type: String, default: "pending" }
   },
-  { timestamps: true }
+  {
+    timestamps: true,
+    toObject: { virtuals: true },
+    toJSON: { virtuals: true }
+  }
 );
+
+OrderSchema.virtual("id").get(function () {
+  // ensure a string id property is available for GraphQL
+  return this._id ? this._id.toString() : undefined;
+});
 
 export default mongoose.models.Order || mongoose.model<IOrder>("Order", OrderSchema);
