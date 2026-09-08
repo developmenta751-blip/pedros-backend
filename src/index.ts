@@ -7,19 +7,32 @@ import { connectDB } from "./db";
 const PORT = process.env.PORT ? Number(process.env.PORT) : 4000;
 
 async function start() {
-  if (!process.env.MONGO_URI) {
-    console.error("MONGO_URI not set in environment");
-    process.exit(1);
-  }
+if (!process.env.MONGO_URI) {
+console.error("MONGO_URI not set in environment");
+process.exit(1);
+}
 
-  await connectDB(process.env.MONGO_URI as string);
+await connectDB(process.env.MONGO_URI);
 
-  const server = new ApolloServer({ typeDefs, resolvers });
-  const { url } = await server.listen({ port: PORT });
-  console.log(`🚀 Server ready at ${url}`);
+const server = new ApolloServer({
+typeDefs,
+resolvers,
+cors: {
+origin: [
+"https://pedros-drab.vercel.app",
+"http://localhost:3000",
+],
+},
+});
+
+const { url } = await server.listen({
+port: PORT,
+});
+
+console.log(`🚀 Server ready at ${url}`);
 }
 
 start().catch((err) => {
-  console.error(err);
-  process.exit(1);
+console.error(err);
+process.exit(1);
 });
